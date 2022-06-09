@@ -374,7 +374,7 @@ p {
 .graph-legend {
   position: absolute;
   margin-right: 20px;
-  left: -100px;
+  left: -40px;
   z-index: 9999;
 }
 .chart {
