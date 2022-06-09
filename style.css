@@ -2,10 +2,15 @@ body {
     font-family: sans-serif;
     background-color: #ffffff;
   }
+
+  .etc_img {
+    width:100px;
+    height:100px;
+  }
   
   .file-upload {
     background-color: #ffffff;
-    width: 50%;
+    width: 70%;
     /* height:30vw; */
     margin: 0 auto;
     padding: 20px;
@@ -88,10 +93,18 @@ body {
   }
   
   .file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
+    max-height: 300px;
+    max-width: 400px;
     margin: auto;
     padding: 20px;
+  }
+
+  .result-image {
+    max-height: 300px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    display: none;
   }
   
   .remove-image {
@@ -263,8 +276,8 @@ p {
 }
 
 #startBtn {
-  width:50%;
-  height:150px;
+  width:80%;
+  height:100px;
   border-radius: 10px; 
   margin:auto;
   display:block;
@@ -301,4 +314,155 @@ p {
 .svg path,
 .svg rect{
   fill: #FF6700;
+}
+
+
+
+.clearfix, .clearfix:before, .clearfix:after {
+  display: block;
+  content: " ";
+  clear: both;
+  zoom: 1;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 1200px;
+}
+.barGraph {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+.graph {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(96%);
+  left: 4%;
+}
+.graph-barBack {
+  border-radius: 2px;
+  background: #DAE4EB;
+  margin-bottom: 10px;
+  display: block;
+}
+.graph-bar {
+  background-color: #59BAC0;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 9999;
+  display: block;
+  height: 100px;
+  width: 0%;
+}
+.graph-legend {
+  position: absolute;
+  margin-right: 20px;
+  left: -100px;
+  z-index: 9999;
+}
+.chart {
+  border-radius: 3px;
+  border: 2px solid rgba(113,125,149,0.45);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+.lines {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+.lines-horz {
+  border-bottom: 1px dashed rgba(113,125,149,0.4);
+  position: absolute;
+  width: 100%;
+  height: 0px;
+}
+.lines-horz:nth-of-type(1) {
+  top: 20%;
+}
+.lines-horz:nth-of-type(2) {
+  top: 40%;
+}
+.lines-horz:nth-of-type(3) {
+  top: 60%;
+}
+.lines-horz:nth-of-type(4) {
+  top: 80%;
+}
+.lines-vert {
+  border-right: 1px dashed rgba(113,125,149,0.4);
+  position: absolute;
+  height: 100%;
+  width: 1px;
+}
+.lines-vert:nth-of-type(5) {
+  left: 20%;
+}
+.lines-vert:nth-of-type(6) {
+  left: 40%;
+}
+.lines-vert:nth-of-type(7) {
+  left: 60%;
+}
+.lines-vert:nth-of-type(8) {
+  left: 80%;
+}
+.lineChart {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 3px;
+  border: 2px solid rgba(113,125,149,0.45);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+}
+.lineChart svg {
+  position: absolute;
+  z-index: 999;
+}
+.lineChart circle {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  position: relative;
+  cursor: pointer;
+  stroke: #59BAC0;
+  stroke-width: 3;
+  fill: #59BAC0;
+}
+.lineChart circle:hover {
+  stroke-width: 8;
+}
+.lineChart line {
+  stroke: #717D95;
+  stroke-width: 4;
+}
+.trend line {
+  stroke: rgba(204,51,51,0.8);
 }
