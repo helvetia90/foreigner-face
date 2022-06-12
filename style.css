@@ -4,8 +4,8 @@ body {
   }
 
   .etc_img {
-    width:100px;
-    height:100px;
+    width:200px;
+    height:300px;
   }
   
   .file-upload {
@@ -185,6 +185,14 @@ body {
     text-decoration: underline;
   }
 
+  .resultMessage {
+    margin-bottom: 50px;
+  }
+
+  .etc_img_container{
+    margin-bottom: 30px;
+  }
+
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 600px) {
     html {
@@ -360,6 +368,7 @@ p {
   border-radius: 2px;
   background: #DAE4EB;
   margin-bottom: 10px;
+  margin-left:30px;
   display: block;
 }
 .graph-bar {
@@ -471,4 +480,74 @@ p {
 }
 .trend line {
   stroke: rgba(204,51,51,0.8);
+}
+
+.progress-pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+.progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 100px);
+  top: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #81CE97;
+  transform: rotate(60deg);
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #E5E5E5;
+}
+
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 173.9130434783px/2);
+  top: calc(50% - 173.9130434783px/2);
+  width: 173.9130434783px;
+  height: 173.9130434783px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+.progress-pie-chart {
+  margin: 50px auto 0;
 }
