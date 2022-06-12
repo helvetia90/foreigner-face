@@ -10,7 +10,7 @@ body {
   
   .file-upload {
     background-color: #ffffff;
-    width: 70%;
+    /* width: 70%; */
     /* height:30vw; */
     margin: 0 auto;
     padding: 20px;
@@ -192,6 +192,12 @@ body {
     }
     .navbar-brand {
         font-size:2rem;
+    }
+    .file-upload-image{
+      max-height: 200px;
+      max-width: 300px;
+      margin: auto;
+      padding: 20px;
     }
   }
 
