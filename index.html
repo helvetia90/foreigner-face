@@ -6,55 +6,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>인공지능 외국인상 테스트</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-622b59d0ce8e96ef"></script>
 </head>
 <body>
-    <!-- <nav class="navbar navbar-light navbar-expand-lg nav-distance">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">외국인 테스트</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav> -->
       <section class="section">
           <h1 class="title">인공지능 외국인상 테스트</h1>
           <h2 class="subtitle">나는 어떤 외국인과 닮았을까?</h2>
       </section>
-      <!-- <section class="youtube">
-            <div class="container mt-5 youtube-cover d-flex flex-row-reverse">
-              <img src="youtube.png" alt="" class="youtube-icon" width="50" height="50">
-              <a href="" class="youtube-link">Youtube 링크</a>
-            </div>
-      </section> -->
       <div id="main" class="container">
         <div class="row justify-content-center">
             <div class="col-md-9">
@@ -63,7 +22,6 @@
                         <div class="row">
                             <div class="col">
                                 <h5><b>성별을 선택해주세요</b></h5>
-                                <!-- <p> What are you reporting ? <span class=" ml-1 cursor-pointer"> Learn more</span> </p> -->
                             </div>
                         </div>
                         <div class="radio-group row justify-content-between px-3 text-center a">
@@ -88,8 +46,10 @@
                             <div class="col">
                               <h5><b>아래 예시와 같이 정면이 나온 본인의 얼굴 사진을 올려주세요!</b></h5>
                                 <p class="text-muted">(업로드 된 사진은 저장되지 않으며, 어떠한 목적으로도 사용되지 않습니다)</p>
-                                <div class="pic"> <img class="irc_mut img-fluid" src="portrait-gb241b2baf_640.jpg" 
-                                  width="300" height="300"> </div>
+                                <div class="pic"> 
+                                  <img class="irc_mut img-fluid" src="portrait-gb241b2baf_640.jpg" 
+                                  width="300" height="300"> 
+                                </div>
                                 <p>(예시 이미지)</p>
                             </div>
                         </div>
@@ -100,15 +60,18 @@
       </div>
     <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <div class="container file-upload">
-        <div class="image-upload-wrap">
-            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-            <div class="drag-text">
-                <h3>사진을 올려주세요</h3>
-            </div>
+      <div class="wrapper">
+        <div class="box">
+          <div class="js--image-preview"></div>
+          <div class="upload-options">
+            <label>
+              <input type="file" class="image-upload" accept="image/*" onchange="readURL(this);" />
+              <img id="face-image" src="#" style="display:none;" />
+            </label>
+          </div>
         </div>
+      </div>
         <div class="file-upload-content">
-          <div class="pic"> <img class="irc_mut img-fluid file-upload-image" alt="your image" id="face-image" src="#"> </div>
-            <!-- <img class="file-upload-image" id="face-image" src="#" alt="your image" /> -->
             <img class="result-image" id="result-image" src="#" alt="your image" />
             <div id="loading">
               <div class="loader loader--style8" title="7">
@@ -133,7 +96,6 @@
               </div>
             </div>
             <h2 class="resultMessage"></h2>
-            <!-- <div id="label-container"></div> -->
             <div class="container" id="result-etc-image-list" style="display:none;">   
               <h2>그 외 나랑 닮은 외국 연예인은?</h2>
               <div class="row" style="margin-top:20px;">
@@ -197,15 +159,12 @@
             </div>
             <p class="share">결과를 친구에게 공유해보세요!</p>
             <div class="addthis_inline_share_toolbox_iabr share"></div>
-            </div>
-            <!-- <div class="image-title-wrap">
-                <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
-            </div> -->
+          </div>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
         </div>
     </div>
-    <div class="container start_div">
-      <Button id="startBtn" class="btn btn-primary btn-lg btn-block">분석하기</Button>
+    <div class="box">
+      <Button id="startBtn" >분석하기</Button>
     </div>
 
     <script>
@@ -219,6 +178,7 @@
       }
 
       $('#startBtn').click(function(){
+        $('.file-upload-content').show();
         $(this).html("분석중입니다..");
         $('#loading').show();
         init().then(()=>{
@@ -228,6 +188,7 @@
                 $('#startBtn').hide();
                 $('#main').hide();
                 $('#result-image').show();
+                $('.js--image-preview').css('height',300);
             });
       });
     </script>
@@ -380,40 +341,108 @@
          }
     </script>
     <script>
-        function readURL(input) {
+      function initImageUpload(box) {
+        let uploadField = box.querySelector('.image-upload');
+
+        uploadField.addEventListener('change', getFile);
+
+        function getFile(e){
+          let file = e.currentTarget.files[0];
+          checkType(file);
+        }
+        
+        function previewImage(file){
+          let thumb = box.querySelector('.js--image-preview'),
+              reader = new FileReader();
+
+          reader.onload = function() {
+            thumb.style.backgroundImage = 'url(' + reader.result + ')';
+          }
+          reader.readAsDataURL(file);
+          thumb.className += ' js--no-default';
+        }
+
+        function checkType(file){
+          let imageType = /image.*/;
+          if (!file.type.match(imageType)) {
+            throw 'Datei ist kein Bild';
+          } else if (!file){
+            throw 'Kein Bild gewählt';
+          } else {
+            previewImage(file);
+          }
+        }
+        
+      }
+
+      // initialize box-scope
+      var boxes = document.querySelectorAll('.box');
+
+      for (let i = 0; i < boxes.length; i++) {
+        let box = boxes[i];
+        initDropEffect(box);
+        initImageUpload(box);
+      }
+
+
+
+      /// drop-effect
+      function initDropEffect(box){
+        let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
+        
+        // get clickable area for drop effect
+        area = box.querySelector('.js--image-preview');
+        area.addEventListener('click', fireRipple);
+        
+        function fireRipple(e){
+          area = e.currentTarget
+          // create drop
+          if(!drop){
+            drop = document.createElement('span');
+            drop.className = 'drop';
+            this.appendChild(drop);
+          }
+          // reset animate class
+          drop.className = 'drop';
+          
+          // calculate dimensions of area (longest side)
+          areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+          areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+          maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+          // set drop dimensions to fill area
+          drop.style.width = maxDistance + 'px';
+          drop.style.height = maxDistance + 'px';
+          
+          // calculate dimensions of drop
+          dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+          dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+          
+          // calculate relative coordinates of click
+          // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
+          x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
+          y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
+          
+          // position drop and animate
+          drop.style.top = y + 'px';
+          drop.style.left = x + 'px';
+          drop.className += ' animate';
+          e.stopPropagation();
+          
+        }
+      }
+
+      function readURL(input) {
             if (input.files && input.files[0]) {
-        
             var reader = new FileReader();
-        
             reader.onload = function(e) {
-                $('.image-upload-wrap').hide();
-        
-                $('.file-upload-image').attr('src', e.target.result);
-                $('.file-upload-content').show();
-        
-                $('.image-title').html(input.files[0].name);
+                $('#face-image').attr('src', e.target.result);
             };
-        
             reader.readAsDataURL(input.files[0]);
-            } else {
-            removeUpload();
-            }
+          }
         }
-        
-        function removeUpload() {
-            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
-            $('.file-upload-content').hide();
-            $('.image-upload-wrap').show();
-        }
-        $('.image-upload-wrap').bind('dragover', function () {
-                $('.image-upload-wrap').addClass('image-dropping');
-            });
-            $('.image-upload-wrap').bind('dragleave', function () {
-                $('.image-upload-wrap').removeClass('image-dropping');
-        });
 
         $(document).ready(function () {
-
           for(var i = 1 ; i <= 5 ; i++){
             $('#graphbarback' + i).hide();
           }
@@ -423,8 +452,6 @@
             $('.radio').removeClass('selected');
             $(this).addClass('selected');
           });
-
-         
         }); 
     </script>
 
@@ -434,8 +461,15 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
-<!-- Copyright (c) 2022 by Aurer (https://codepen.io/aurer/pen/ZEJxpO)
+<!-- Copyright (c) 2022 by Shankar Cabus (https://codepen.io/shankarcabus/pen/kOEYBO)
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
+<!-- Copyright (c) 2022 by Bastian Andre (https://codepen.io/BastianAndre/pen/RpwOmp)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+
 </html>
+
