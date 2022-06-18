@@ -1,238 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>인공지능 외국인상 테스트</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-622b59d0ce8e96ef"></script>
-</head>
-<body>
-      <section class="section">
-          <h1 class="title">인공지능 외국인상 테스트</h1>
-          <h2 class="subtitle">나는 어떤 외국인과 닮았을까?</h2>
-      </section>
-      <div id="main" class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9">
-                <div class="card text-center justify-content-center shaodw-lg  card-1 border-0 bg-white px-sm-2">
-                    <div class="card-body show  ">
-                        <div class="row">
-                            <div class="col">
-                                <h5><b>성별을 선택해주세요</b></h5>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>인공지능 외국인상 테스트</title>
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet">
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script
+            type="text/javascript"
+            src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-622b59d0ce8e96ef"></script>
+    </head>
+    <body>
+        <section class="section">
+            <h1 class="title">인공지능 외국인상 테스트</h1>
+            <h2 class="subtitle">나는 어떤 외국인과 닮았을까?</h2>
+        </section>
+        <div id="main" class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-9">
+                    <div
+                        class="card text-center justify-content-center shaodw-lg  card-1 border-0 bg-white px-sm-2">
+                        <div class="card-body show  ">
+                            <div class="row">
+                                <div class="col">
+                                    <h5>
+                                        <b>성별을 선택해주세요</b>
+                                    </h5>
+                                </div>
                             </div>
-                        </div>
-                        <div class="radio-group row justify-content-between px-3 text-center a">
-                            <div id="man_btn" value="man" onclick="selectSex('man')" class="col-auto mr-sm-2 mx-1 card-block  py-0 text-center radio selected ">
-                                <div class="flex-row">
-                                    <div class="col">
-                                        <div class="pic"> <img class="irc_mut img-fluid" src="equality-g81af55e84_640.jpg" width="150" height="150"> </div>
-                                        <p>남자</p>
+                            <div class="radio-group row justify-content-between px-3 text-center a">
+                                <div
+                                    id="man_btn"
+                                    value="man"
+                                    onclick="selectSex('man')"
+                                    class="col-auto mr-sm-2 mx-1 card-block  py-0 text-center radio selected ">
+                                    <div class="flex-row">
+                                        <div class="col">
+                                            <div class="pic">
+                                                <img
+                                                    class="irc_mut img-fluid"
+                                                    src="equality-g81af55e84_640.jpg"
+                                                    width="150"
+                                                    height="150">
+                                            </div>
+                                            <p>남자</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    id="woman_btn"
+                                    value="woman"
+                                    onclick="selectSex('woman')"
+                                    class="col-auto ml-sm-2 mx-1 card-block  py-0 text-center radio  ">
+                                    <div class="flex-row">
+                                        <div class="col">
+                                            <div class="pic">
+                                                <img
+                                                    class="irc_mut img-fluid"
+                                                    src="equality-ge9f01e8c7_640.jpg"
+                                                    width="150"
+                                                    height="150">
+                                            </div>
+                                            <p>여자</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="woman_btn" value="woman" onclick="selectSex('woman')" class="col-auto ml-sm-2 mx-1 card-block  py-0 text-center radio  ">
-                                <div class="flex-row">
-                                    <div class="col">
-                                        <div class="pic"> <img class="irc_mut img-fluid" src="equality-ge9f01e8c7_640.jpg"  width="150" height="150"> </div>
-                                        <p>여자</p>
+                            <div class="row justify-content-center">
+                                <div class="col">
+                                    <h5>
+                                        <b>아래 예시와 같이 정면이 나온 본인의 얼굴 사진을 올려주세요!</b>
+                                    </h5>
+                                    <p class="text-muted">(업로드 된 사진은 저장되지 않으며, 어떠한 목적으로도 사용되지 않습니다)</p>
+                                    <div class="pic">
+                                        <img
+                                            class="irc_mut img-fluid"
+                                            src="portrait-gb241b2baf_640.jpg"
+                                            width="300"
+                                            height="300">
                                     </div>
+                                    <p>(예시 이미지)</p>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col">
-                              <h5><b>아래 예시와 같이 정면이 나온 본인의 얼굴 사진을 올려주세요!</b></h5>
-                                <p class="text-muted">(업로드 된 사진은 저장되지 않으며, 어떠한 목적으로도 사용되지 않습니다)</p>
-                                <div class="pic"> 
-                                  <img class="irc_mut img-fluid" src="portrait-gb241b2baf_640.jpg" 
-                                  width="300" height="300"> 
-                                </div>
-                                <p>(예시 이미지)</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <div class="container file-upload">
-      <div class="wrapper">
-        <div class="box">
-          <div class="js--image-preview"></div>
-          <div class="upload-options">
-            <label>
-              <input type="file" class="image-upload" accept="image/*" onchange="readURL(this);" />
-              <img id="face-image" src="#" style="display:none;" />
-            </label>
-          </div>
-        </div>
-      </div>
-        <div class="file-upload-content">
-            <img class="result-image" id="result-image" src="#" alt="your image" />
-            <div id="loading">
-              <div class="loader loader--style8" title="7">
-                <svg class="svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="32px" height="40" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                  <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-                    <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                </svg>
-              </div>
+        <script
+            class="jsbin"
+            src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <div class="container file-upload">
+            <div class="wrapper">
+                <div class="box">
+                    <div class="js--image-preview"></div>
+                    <div class="upload-options">
+                        <label>
+                            <input
+                                id="image-upload"
+                                type="file"
+                                class="image-upload"
+                                accept="image/*"
+                                onchange="readURL(this);"/>
+                            <img id="face-image" src="#" style="display:none;"/>
+                        </label>
+                    </div>
+                </div>
             </div>
-            <h2 class="resultMessage"></h2>
-            <div class="container" id="result-etc-image-list" style="display:none;">   
-              <h2>그 외 나랑 닮은 외국 연예인은?</h2>
-              <div class="row" style="margin-top:20px;">
-                <div class="col-md-3 etc_img_container">
-                  <img class="etc_img" id="etc_img1">
-                  <p id="label1"></p>
-                  <div class="progress-pie-chart" id="piechart1">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill"></div>
+            <div class="file-upload-content">
+                <img class="result-image" id="result-image" src="#" alt="your image"/>
+                <div id="loading">
+                    <div class="loader loader--style8" title="7">
+                        <svg
+                            class="svg"
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            width="32px"
+                            height="40"
+                            viewbox="0 0 24 30"
+                            style="enable-background:new 0 0 50 50;"
+                            xml:space="preserve">
+                            <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                                <animate
+                                    attributename="opacity"
+                                    attributetype="XML"
+                                    values="0.2; 1; .2"
+                                    begin="0s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="height"
+                                    attributetype="XML"
+                                    values="10; 20; 10"
+                                    begin="0s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="y"
+                                    attributetype="XML"
+                                    values="10; 5; 10"
+                                    begin="0s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                            </rect>
+                            <rect x="8" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                                <animate
+                                    attributename="opacity"
+                                    attributetype="XML"
+                                    values="0.2; 1; .2"
+                                    begin="0.15s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="height"
+                                    attributetype="XML"
+                                    values="10; 20; 10"
+                                    begin="0.15s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="y"
+                                    attributetype="XML"
+                                    values="10; 5; 10"
+                                    begin="0.15s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                            </rect>
+                            <rect x="16" y="10" width="4" height="10" fill="#333" opacity="0.2">
+                                <animate
+                                    attributename="opacity"
+                                    attributetype="XML"
+                                    values="0.2; 1; .2"
+                                    begin="0.3s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="height"
+                                    attributetype="XML"
+                                    values="10; 20; 10"
+                                    begin="0.3s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                                <animate
+                                    attributename="y"
+                                    attributetype="XML"
+                                    values="10; 5; 10"
+                                    begin="0.3s"
+                                    dur="0.6s"
+                                    repeatcount="indefinite"/>
+                            </rect>
+                        </svg>
                     </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span id="ppc-percents1">%</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-md-3 etc_img_container">
-                  <img class="etc_img" id="etc_img2">
-                  <p id="label2"></p>
-                  <div class="progress-pie-chart" id="piechart2">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill"></div>
+                <h2 class="resultMessage"></h2>
+                <div class="container" id="result-etc-image-list" style="display:none;">
+                    <h2>그 외 나랑 닮은 외국 연예인은?</h2>
+                    <div class="row" style="margin-top:20px;">
+                        <div id="result_div1" class="col-md-3 etc_img_container">
+                            <img class="etc_img" id="etc_img1">
+                            <p id="label1"></p>
+                            <span id="ppc-percents1" class="percent"></span>
+                            <div class="progress-pie-chart" id="piechart1"></div>
+                        </div>
+                        <div id="result_div2" class="col-md-3 etc_img_container">
+                            <img class="etc_img" id="etc_img2">
+                            <p id="label2"></p>
+                            <span id="ppc-percents2" class="percent"></span>
+                            <div class="progress-pie-chart" id="piechart2">
+                            </div>
+                        </div>
+                        <div id="result_div3" class="col-md-3 etc_img_container">
+                            <img class="etc_img" id="etc_img3">
+                            <p id="label3"></p>
+                            <span id="ppc-percents3" class="percent"></span>
+                            <div class="progress-pie-chart" id="piechart3">
+                            </div>
+                        </div>
+                        <div id="result_div4" class="col-md-3 etc_img_container">
+                            <img class="etc_img" id="etc_img4">
+                            <p id="label4"></p>
+                            <span id="ppc-percents4" class="percent"></span>
+                            <div class="progress-pie-chart" id="piechart4">
+                            </div>
+                        </div>
                     </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span id="ppc-percents2">%</span>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-                <div class="col-md-3 etc_img_container">
-                  <img class="etc_img" id="etc_img3">
-                  <p id="label3"></p>
-                  <div class="progress-pie-chart" id="piechart3">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill"></div>
-                    </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span id="ppc-percents3">%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-3 etc_img_container">
-                  <img class="etc_img" id="etc_img4">
-                  <p id="label4"></p>
-                  <div class="progress-pie-chart" id="piechart4">
-                    <div class="ppc-progress">
-                      <div class="ppc-progress-fill"></div>
-                    </div>
-                    <div class="ppc-percents">
-                      <div class="pcc-percents-wrapper">
-                        <span id="ppc-percents4">%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                <p class="share">결과를 친구에게 공유해보세요!</p>
+                <div class="addthis_inline_share_toolbox_iabr share"></div>
             </div>
-            <p class="share">결과를 친구에게 공유해보세요!</p>
-            <div class="addthis_inline_share_toolbox_iabr share"></div>
-          </div>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
+            <div class="container">
+                <div class="wrapper">
+                    <button id="startBtn" class="btn btn-large">분석하기</button>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="box">
-      <Button id="startBtn" >분석하기</Button>
     </div>
 
     <script>
 
-      var toggle = "man";
-      function selectSex(value){
-        if(value === "man")
-          toggle = "man";
-        else
-          toggle = "woman";
-      }
-
-      $('#startBtn').click(function(){
-        $('.file-upload-content').show();
-        $(this).html("분석중입니다..");
-        $('#loading').show();
-        init().then(()=>{
-                predict();  
+        var toggle = "man";
+        function selectSex(value) {
+            if (value === "man") 
+                toggle = "man";
+            else 
+                toggle = "woman";
+            }
+        
+        $('#startBtn').click(function () {
+          var fileCheck = document.getElementById("image-upload").value;
+          if(!fileCheck){
+            alert("파일을 첨부해 주세요");
+            return false;
+          }
+            $("#startBtn").attr("disabled", true);
+            $('.image-upload').attr('disabled', 'disabled');
+            $('.file-upload-content').show();
+            $(this).html("분석중입니다..");
+            $('#loading').show();
+            init().then(() => {
+                predict();
                 $('#loading').hide();
                 $('.share').show();
                 $('#startBtn').hide();
                 $('#main').hide();
                 $('#result-image').show();
-                $('.js--image-preview').css('height',300);
+                $('.js--image-preview').css('height', 300);
             });
-      });
+        });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
     <script type="text/javascript">
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
-
         // the link to your model provided by Teachable Machine export panel
         const URL = "https://teachablemachine.withgoogle.com/models/eSa4_r574/";
         const URL2 = "https://teachablemachine.withgoogle.com/models/C_HbYcjR4/";
 
-        let model, webcam, labelContainer, maxPredictions;
+        let model,
+            webcam,
+            labelContainer,
+            maxPredictions;
 
         // Load the image model and setup the webcam
         async function init() {
-              var modelURL = ""; 
-              var metadataURL = "";  
+            var modelURL = "";
+            var metadataURL = "";
 
-              if(toggle === "man"){
+            if (toggle === "man") {
                 modelURL = URL + "model.json";
                 metadataURL = URL + "metadata.json";
-              } else {
+            } else {
                 modelURL = URL2 + "model.json";
                 metadataURL = URL2 + "metadata.json";
-              }
+            }
 
-
-            // load the model and metadata
-            // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
-            // or files from your local hard drive
+            // load the model and metadata Refer to tmImage.loadFromFiles() in the API to
+            // support files from a file picker or files from your local hard drive
             // Note: the pose library adds "tmImage" object to your window (window.tmImage)
             model = await tmImage.load(modelURL, metadataURL);
             maxPredictions = model.getTotalClasses();
 
-            // append elements to the DOM
-            // labelContainer = document.getElementById("label-container");
-            // for (let i = 0; i < maxPredictions; i++) { // and class labels
-            //     labelContainer.appendChild(document.createElement("div"));
-            // }
+            // append elements to the DOM labelContainer =
+            // document.getElementById("label-container"); for (let i = 0; i <
+            // maxPredictions; i++) {  and class labels
+            // labelContainer.appendChild(document.createElement("div")); }
         }
 
         // run the webcam image through the image model
@@ -240,67 +340,69 @@
             // predict can take in an image, video or canvas html element
             var image = document.getElementById("face-image");
             const prediction = await model.predict(image, false);
-            prediction.sort((a, b) => parseFloat(b.probability) - parseFloat(a.probability));
+            prediction.sort(
+                (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
+            );
             var resultMessage = "";
 
-            if(toggle === "man"){
-                switch(prediction[0].className){
-                  case "lee":
-                      resultMessage = "lee";
-                      break;
-                  case "jun":
-                      resultMessage = "jun";
-                      break;
-                  default:
-                      resultMessage = "nonono";
-                      break;        
-              }
+            if (toggle === "man") {
+                switch (prediction[0].className) {
+                    case "lee":
+                        resultMessage = "lee";
+                        break;
+                    case "jun":
+                        resultMessage = "jun";
+                        break;
+                    default:
+                        resultMessage = "nonono";
+                        break;
+                }
             } else {
-                switch(prediction[0].className){
-                  case "Adele":
-                      resultMessage = "Adele";
-                      $('#result-image').attr('src','./image/woman/adele.jpg');
-                      break;
-                  case "AlexandraDaddario":
-                      resultMessage = "Alexandra Daddario";
-                      $('#result-image').attr('src','./image/woman/AlexandraDaddario.jpg');
-                      break;
-                  case "AmandaSeyfried":
-                      resultMessage = "Amanda Seyfried";
-                      $('#result-image').attr('src','./image/woman/AmandaSeyfried.jpg');
-                      break;
-                  case "Angelina Jolie":
-                      resultMessage = "Angelina Jolie";
-                      $('#result-image').attr('src','./image/woman/AngelinaJolie.jpg');
-                      break;
-                  case "AnneHathaway":
-                      resultMessage = "Anne Hathaway";
-                      $('#result-image').attr('src','./image/woman/AnneHathaway.jpg');
-                      break;
-                  case "ArianaGrande":
-                      resultMessage = "Ariana Grande";
-                      $('#result-image').attr('src','./image/woman/ArianaGrande.jpg');
-                      break;
-                  case "CharlizeTheron":
-                      resultMessage = "Charlize Theron";
-                      $('#result-image').attr('src','./image/woman/CharlizeTheron.jpg');
-                      break;
-                  case "ChloeMoretz":
-                      resultMessage = "Chloe Moretz";
-                      $('#result-image').attr('src','./image/woman/ChloeMoretz.jpg');
-                      break;
-                  case "DemiLovato":
-                      resultMessage = "Demi Lovato";
-                      $('#result-image').attr('src','./image/woman/DemiLovato.jpg');
-                      break;
-                  case "ElizabethOlsen":
-                      resultMessage = "Elizabeth Olsen";
-                      $('#result-image').attr('src','./image/woman/ElizabethOlsen.jpg');
-                      break;
-                  default:
-                      resultMessage = prediction[0].className;
-                      break;        
-              }
+                switch (prediction[0].className) {
+                    case "Adele":
+                        resultMessage = "Adele";
+                        $('#result-image').attr('src', './image/woman/adele.jpg');
+                        break;
+                    case "AlexandraDaddario":
+                        resultMessage = "Alexandra Daddario";
+                        $('#result-image').attr('src', './image/woman/AlexandraDaddario.jpg');
+                        break;
+                    case "AmandaSeyfried":
+                        resultMessage = "Amanda Seyfried";
+                        $('#result-image').attr('src', './image/woman/AmandaSeyfried.jpg');
+                        break;
+                    case "Angelina Jolie":
+                        resultMessage = "Angelina Jolie";
+                        $('#result-image').attr('src', './image/woman/AngelinaJolie.jpg');
+                        break;
+                    case "AnneHathaway":
+                        resultMessage = "Anne Hathaway";
+                        $('#result-image').attr('src', './image/woman/AnneHathaway.jpg');
+                        break;
+                    case "ArianaGrande":
+                        resultMessage = "Ariana Grande";
+                        $('#result-image').attr('src', './image/woman/ArianaGrande.jpg');
+                        break;
+                    case "CharlizeTheron":
+                        resultMessage = "Charlize Theron";
+                        $('#result-image').attr('src', './image/woman/CharlizeTheron.jpg');
+                        break;
+                    case "ChloeMoretz":
+                        resultMessage = "Chloe Moretz";
+                        $('#result-image').attr('src', './image/woman/ChloeMoretz.jpg');
+                        break;
+                    case "DemiLovato":
+                        resultMessage = "Demi Lovato";
+                        $('#result-image').attr('src', './image/woman/DemiLovato.jpg');
+                        break;
+                    case "ElizabethOlsen":
+                        resultMessage = "Elizabeth Olsen";
+                        $('#result-image').attr('src', './image/woman/ElizabethOlsen.jpg');
+                        break;
+                    default:
+                        resultMessage = prediction[0].className;
+                        break;
+                }
             }
 
             $('.resultMessage').html(resultMessage);
@@ -308,168 +410,218 @@
             var cnt = 0;
             var probabilityList = [];
             for (let i = 0; i < maxPredictions; i++) {
-              if(cnt >= 5)
-                break;
-              // console.log(prediction[i].probability);
-              if(prediction[i].probability.toFixed(2) > 0.00){
-                // const classPrediction =
-                //     prediction[i].className + ": " + prediction[i].probability.toFixed(2);
-                // labelContainer.childNodes[i].innerHTML = classPrediction;
-                sum += (prediction[i].probability.toFixed(2)*1);
-                probabilityList[cnt] = prediction[i].probability.toFixed(2);
-                cnt++;
-                $('#label' + (i+1)).text(prediction[i].className);
-                $('#etc_img' + (i+1)).attr('src','./image/woman/' + prediction[i].className + '.jpg');
-              }
-              $('#result-etc-image-list').show();
+                if (cnt >= 5) 
+                    break;
+                
+                // console.log(prediction[i].probability);
+                if (prediction[i].probability.toFixed(2) > 0.00) {
+                    // const classPrediction =     prediction[i].className + ": " +
+                    // prediction[i].probability.toFixed(2); labelContainer.childNodes[i].innerHTML
+                    // = classPrediction;
+                    sum += (prediction[i].probability.toFixed(2) * 1);
+                    probabilityList[cnt] = prediction[i]
+                        .probability
+                        .toFixed(2);
+                    cnt++;
+                    $('#label' + (
+                        i + 1
+                    )).text(prediction[i].className);
+                    $('#result_div' + (i+1)).show();
+                    $('#etc_img' + (
+                        i + 1
+                    )).attr('src', './image/woman/' + prediction[i].className + '.jpg');
+                }
+                $('#result-etc-image-list').show();
             }
 
-            for(let i = 0 ; i < cnt ; i++){
-                var value = Math.floor(probabilityList[i]/sum*100);
-                $('#piechart'+(i+1)).attr("data-percent", value);
-                
-                var ppc = $('#piechart' + (i+1));
+            for (let i = 0; i < cnt; i++) {
+                var value = Math.floor(probabilityList[i] / sum * 100);
+                $('#piechart' + (
+                    i + 1
+                )).attr("data-percent", value);
+
+                var ppc = $('#piechart' + (
+                    i + 1
+                ));
                 var percent = ppc.data('percent');
-                var deg = 360*percent/100;
-                if (percent > 50) {
-                  ppc.addClass('gt-50');
-                }
-                $('.ppc-progress-fill').css('transform','rotate('+ deg +'deg)');
-                $('#ppc-percents' + (i+1)).text(percent+'%');
-              }
-            
-         }
+                $('#ppc-percents' + (
+                    i + 1
+                )).text(percent + '%');
+            }
+
+        }
     </script>
     <script>
-      function initImageUpload(box) {
-        let uploadField = box.querySelector('.image-upload');
+        function initImageUpload(box) {
+            let uploadField = box.querySelector('.image-upload');
 
-        uploadField.addEventListener('change', getFile);
+            uploadField.addEventListener('change', getFile);
 
-        function getFile(e){
-          let file = e.currentTarget.files[0];
-          checkType(file);
+            function getFile(e) {
+                let file = e
+                    .currentTarget
+                    .files[0];
+                checkType(file);
+            }
+
+            function previewImage(file) {
+                let thumb = box.querySelector('.js--image-preview'),
+                    reader = new FileReader();
+
+                reader.onload = function () {
+                    thumb.style.backgroundImage = 'url(' + reader.result + ')';
+                }
+                reader.readAsDataURL(file);
+                thumb.className += ' js--no-default';
+            }
+
+            function checkType(file) {
+                let imageType = /image.*/;
+                if (!file.type.match(imageType)) {
+                    throw 'Datei ist kein Bild';
+                } else if (!file) {
+                    throw 'Kein Bild gewählt';
+                } else {
+                    previewImage(file);
+                }
+            }
+
         }
-        
-        function previewImage(file){
-          let thumb = box.querySelector('.js--image-preview'),
-              reader = new FileReader();
 
-          reader.onload = function() {
-            thumb.style.backgroundImage = 'url(' + reader.result + ')';
-          }
-          reader.readAsDataURL(file);
-          thumb.className += ' js--no-default';
+        // initialize box-scope
+        var boxes = document.querySelectorAll('.box');
+
+        for (let i = 0; i < boxes.length; i++) {
+            let box = boxes[i];
+            initDropEffect(box);
+            initImageUpload(box);
         }
 
-        function checkType(file){
-          let imageType = /image.*/;
-          if (!file.type.match(imageType)) {
-            throw 'Datei ist kein Bild';
-          } else if (!file){
-            throw 'Kein Bild gewählt';
-          } else {
-            previewImage(file);
-          }
+        /// drop-effect
+        function initDropEffect(box) {
+            let area,
+                drop,
+                areaWidth,
+                areaHeight,
+                maxDistance,
+                dropWidth,
+                dropHeight,
+                x,
+                y;
+
+            // get clickable area for drop effect
+            area = box.querySelector('.js--image-preview');
+            area.addEventListener('click', fireRipple);
+
+            function fireRipple(e) {
+                area = e.currentTarget
+                // create drop
+                if (!drop) {
+                    drop = document.createElement('span');
+                    drop.className = 'drop';
+                    this.appendChild(drop);
+                }
+                // reset animate class
+                drop.className = 'drop';
+
+                // calculate dimensions of area (longest side)
+                areaWidth = getComputedStyle(this, null).getPropertyValue("width");
+                areaHeight = getComputedStyle(this, null).getPropertyValue("height");
+                maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
+
+                // set drop dimensions to fill area
+                drop.style.width = maxDistance + 'px';
+                drop.style.height = maxDistance + 'px';
+
+                // calculate dimensions of drop
+                dropWidth = getComputedStyle(this, null).getPropertyValue("width");
+                dropHeight = getComputedStyle(this, null).getPropertyValue("height");
+
+                // calculate relative coordinates of click logic: click coordinates relative to
+                // page - parent's position relative to page - half of self height/width to make
+                // it controllable from the center
+                x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10) / 2);
+                y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10) / 2) - 30;
+
+                // position drop and animate
+                drop.style.top = y + 'px';
+                drop.style.left = x + 'px';
+                drop.className += ' animate';
+                e.stopPropagation();
+
+            }
         }
-        
-      }
 
-      // initialize box-scope
-      var boxes = document.querySelectorAll('.box');
-
-      for (let i = 0; i < boxes.length; i++) {
-        let box = boxes[i];
-        initDropEffect(box);
-        initImageUpload(box);
-      }
-
-
-
-      /// drop-effect
-      function initDropEffect(box){
-        let area, drop, areaWidth, areaHeight, maxDistance, dropWidth, dropHeight, x, y;
-        
-        // get clickable area for drop effect
-        area = box.querySelector('.js--image-preview');
-        area.addEventListener('click', fireRipple);
-        
-        function fireRipple(e){
-          area = e.currentTarget
-          // create drop
-          if(!drop){
-            drop = document.createElement('span');
-            drop.className = 'drop';
-            this.appendChild(drop);
-          }
-          // reset animate class
-          drop.className = 'drop';
-          
-          // calculate dimensions of area (longest side)
-          areaWidth = getComputedStyle(this, null).getPropertyValue("width");
-          areaHeight = getComputedStyle(this, null).getPropertyValue("height");
-          maxDistance = Math.max(parseInt(areaWidth, 10), parseInt(areaHeight, 10));
-
-          // set drop dimensions to fill area
-          drop.style.width = maxDistance + 'px';
-          drop.style.height = maxDistance + 'px';
-          
-          // calculate dimensions of drop
-          dropWidth = getComputedStyle(this, null).getPropertyValue("width");
-          dropHeight = getComputedStyle(this, null).getPropertyValue("height");
-          
-          // calculate relative coordinates of click
-          // logic: click coordinates relative to page - parent's position relative to page - half of self height/width to make it controllable from the center
-          x = e.pageX - this.offsetLeft - (parseInt(dropWidth, 10)/2);
-          y = e.pageY - this.offsetTop - (parseInt(dropHeight, 10)/2) - 30;
-          
-          // position drop and animate
-          drop.style.top = y + 'px';
-          drop.style.left = x + 'px';
-          drop.className += ' animate';
-          e.stopPropagation();
-          
-        }
-      }
-
-      function readURL(input) {
+        function readURL(input) {
             if (input.files && input.files[0]) {
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                $('#face-image').attr('src', e.target.result);
-            };
-            reader.readAsDataURL(input.files[0]);
-          }
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#face-image').attr('src', e.target.result);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
         }
 
         $(document).ready(function () {
-          for(var i = 1 ; i <= 5 ; i++){
-            $('#graphbarback' + i).hide();
-          }
+            for (var i = 1; i <= 5; i++) {
+                $('#graphbarback' + i).hide();
+            }
 
-          $('.radio-group .radio').click(function () {
-            $('.selected .fa').removeClass('fa-check');
-            $('.radio').removeClass('selected');
-            $(this).addClass('selected');
-          });
-        }); 
+            $('.radio-group .radio').click(function () {
+                $('.selected .fa').removeClass('fa-check');
+                $('.radio').removeClass('selected');
+                $(this).addClass('selected');
+            });
+        });
     </script>
 
 </body>
-<!-- Copyright (c) 2022 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<!-- Copyright (c) 2022 by Aaron Vanston
+(https://codepen.io/aaronvanston/pen/yNYOXR) Permission is hereby granted, free
+of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+to permit persons to whom the Software is furnished to do so, subject to the
+following conditions: The above copyright notice and this permission notice
+shall be included in all copies or substantial portions of the Software. THE
+SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
-<!-- Copyright (c) 2022 by Shankar Cabus (https://codepen.io/shankarcabus/pen/kOEYBO)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<!-- Copyright (c) 2022 by Shankar Cabus
+(https://codepen.io/shankarcabus/pen/kOEYBO) Permission is hereby granted, free
+of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+to permit persons to whom the Software is furnished to do so, subject to the
+following conditions: The above copyright notice and this permission notice
+shall be included in all copies or substantial portions of the Software. THE
+SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
-<!-- Copyright (c) 2022 by Bastian Andre (https://codepen.io/BastianAndre/pen/RpwOmp)
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
+<!-- Copyright (c) 2022 by Bastian Andre
+(https://codepen.io/BastianAndre/pen/RpwOmp) Permission is hereby granted, free
+of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use, copy, modify,
+merge, publish, distribute, sublicense, and/or sell copies of the Software, and
+to permit persons to whom the Software is furnished to do so, subject to the
+following conditions: The above copyright notice and this permission notice
+shall be included in all copies or substantial portions of the Software. THE
+SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 
 </html>
-

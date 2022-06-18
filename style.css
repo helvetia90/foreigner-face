@@ -185,11 +185,12 @@ body {
     text-decoration: underline;
   }
 
-  .resultMessage {
-    margin-bottom: 50px;
+  #result-etc-image-list{
+    margin-top:50px;
   }
 
   .etc_img_container{
+    display: none;
     margin-bottom: 30px;
   }
 
@@ -287,15 +288,6 @@ p {
 .btn:active {
     outline: none !important;
     box-shadow: none !important;
-}
-
-#startBtn {
-  width:80%;
-  height:100px;
-  border-radius: 10px; 
-  margin:auto;
-  display:block;
-  font-size: 3rem;
 }
 
 .share {
@@ -478,63 +470,26 @@ p {
 }
 
 .progress-pie-chart {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: #E5E5E5;
   position: relative;
-}
-.progress-pie-chart.gt-50 {
-  background-color: #81CE97;
-}
-
-.ppc-progress {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 200px, 200px, 100px);
-}
-.ppc-progress .ppc-progress-fill {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 100px, 200px, 0);
-  background: #81CE97;
-  transform: rotate(60deg);
-}
-.gt-50 .ppc-progress {
-  clip: rect(0, 100px, 200px, 0);
-}
-.gt-50 .ppc-progress .ppc-progress-fill {
-  clip: rect(0, 200px, 200px, 100px);
-  background: #E5E5E5;
 }
 
 .ppc-percents {
   content: "";
   position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 173.9130434783px/2);
-  top: calc(50% - 173.9130434783px/2);
-  width: 173.9130434783px;
-  height: 173.9130434783px;
-  background: #fff;
   text-align: center;
-  display: table;
+}
+
+.percent {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: cadetblue;
 }
 .ppc-percents span {
   display: block;
   font-size: 2.6em;
   font-weight: bold;
-  color: #81CE97;
+  color: cadetblue;
 }
 
 .pcc-percents-wrapper {
@@ -680,4 +635,73 @@ i.material-icons {
     opacity: 0;
     transform: scale(2.5);
   }
+}
+
+
+
+.btn {
+  margin: 3px 0;
+}
+
+/* Button (defaults) */
+.btn {
+  min-width: 300px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  background-color: cadetblue;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 40px;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  /* Hover */
+  /* Pressed */
+  /* Disabled */
+  /* Small Buttons */
+  /* large Buttons */
+  /* Border */
+  /* Pill */
+  /* Icons */
+  /* Reverse */
+}
+.btn:visited {
+  color: #fff;
+}
+.btn:hover, .btn:focus, .btn.btn-hover {
+  color: #fff;
+  background-color: #7fb1b3;;
+  text-decoration: none;
+  outline: none;
+}
+.btn:disabled, .btn.btn-disabled {
+  background-color: #7fb1b3 !important;
+  border: 1px solid #7fb1b3 !important;
+  color: #fff !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  pointer-events: none !important;
+  opacity: 0.8 !important;
+}
+
+.btn.btn-large {
+  font-size: 20px;
+  font-weight: normal;
+  height: 70px;
+  line-height: 50px;
+  padding: 0 50px;
 }
