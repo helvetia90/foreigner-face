@@ -261,9 +261,9 @@
             }
         
         $('#startBtn').click(function () {
-          var fileCheck = document.getElementById("image-upload").value;
-          if(!fileCheck){
-            alert("파일을 첨부해 주세요");
+          var fileCheck = $("#face-image").attr('src');
+          if(fileCheck === "#"){
+            alert("사진을 업로드 해주세요");
             return false;
           }
             $("#startBtn").attr("disabled", true);
