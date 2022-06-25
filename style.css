@@ -6,7 +6,7 @@ body {
   .etc_img {
     width:100%;
     max-width: 400px;
-    height:auto;
+    max-height:300px;
   }
   
   .file-upload {
@@ -705,4 +705,17 @@ i.material-icons {
   height: 70px;
   line-height: 50px;
   padding: 0 50px;
+}
+
+.resultbox {
+    display: block;
+    min-width: 300px;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+  
 }
