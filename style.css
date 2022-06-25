@@ -4,8 +4,9 @@ body {
   }
 
   .etc_img {
-    width:200px;
-    height:300px;
+    width:100%;
+    max-width: 400px;
+    height:auto;
   }
   
   .file-upload {
