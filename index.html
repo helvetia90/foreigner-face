@@ -302,8 +302,8 @@
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/eSa4_r574/";
-        const URL2 = "https://teachablemachine.withgoogle.com/models/C_HbYcjR4/";
+        const URL = "https://teachablemachine.withgoogle.com/models/A6Kanyhw7/";
+        const URL2 = "https://teachablemachine.withgoogle.com/models/Fwhrt_DZK/";
 
         let model,
             webcam,
@@ -343,66 +343,13 @@
             prediction.sort(
                 (a, b) => parseFloat(b.probability) - parseFloat(a.probability)
             );
-            var resultMessage = "";
+            var resultMessage = prediction[0].className;
+                        
 
             if (toggle === "man") {
-                switch (prediction[0].className) {
-                    case "lee":
-                        resultMessage = "lee";
-                        break;
-                    case "jun":
-                        resultMessage = "jun";
-                        break;
-                    default:
-                        resultMessage = "nonono";
-                        break;
-                }
+                $('#result-image').attr('src', './image/man/' + resultMessage + '.jpg');
             } else {
-                switch (prediction[0].className) {
-                    case "Adele":
-                        resultMessage = "Adele";
-                        $('#result-image').attr('src', './image/woman/adele.jpg');
-                        break;
-                    case "AlexandraDaddario":
-                        resultMessage = "Alexandra Daddario";
-                        $('#result-image').attr('src', './image/woman/AlexandraDaddario.jpg');
-                        break;
-                    case "AmandaSeyfried":
-                        resultMessage = "Amanda Seyfried";
-                        $('#result-image').attr('src', './image/woman/AmandaSeyfried.jpg');
-                        break;
-                    case "Angelina Jolie":
-                        resultMessage = "Angelina Jolie";
-                        $('#result-image').attr('src', './image/woman/AngelinaJolie.jpg');
-                        break;
-                    case "AnneHathaway":
-                        resultMessage = "Anne Hathaway";
-                        $('#result-image').attr('src', './image/woman/AnneHathaway.jpg');
-                        break;
-                    case "ArianaGrande":
-                        resultMessage = "Ariana Grande";
-                        $('#result-image').attr('src', './image/woman/ArianaGrande.jpg');
-                        break;
-                    case "CharlizeTheron":
-                        resultMessage = "Charlize Theron";
-                        $('#result-image').attr('src', './image/woman/CharlizeTheron.jpg');
-                        break;
-                    case "ChloeMoretz":
-                        resultMessage = "Chloe Moretz";
-                        $('#result-image').attr('src', './image/woman/ChloeMoretz.jpg');
-                        break;
-                    case "DemiLovato":
-                        resultMessage = "Demi Lovato";
-                        $('#result-image').attr('src', './image/woman/DemiLovato.jpg');
-                        break;
-                    case "ElizabethOlsen":
-                        resultMessage = "Elizabeth Olsen";
-                        $('#result-image').attr('src', './image/woman/ElizabethOlsen.jpg');
-                        break;
-                    default:
-                        resultMessage = prediction[0].className;
-                        break;
-                }
+                $('#result-image').attr('src', './image/woman/' + resultMessage + '.jpg');    
             }
 
             $('.resultMessage').html(resultMessage);
