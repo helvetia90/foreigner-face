@@ -710,6 +710,7 @@ i.material-icons {
 
 .resultbox {
     display: block;
+    min-width: 300px;
     height: 300px;
     margin: 10px;
     background-color: white;
