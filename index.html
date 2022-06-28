@@ -353,11 +353,14 @@
             );
             var resultMessage = prediction[0].className;
                         
-
+            var imageUrl = '';
             if (toggle === "man") {
                 $('#result-image').attr('src', './image/man/' + resultMessage + '.jpg');
+                imageUrl = './image/man/';
+
             } else {
-                $('#result-image').attr('src', './image/woman/' + resultMessage + '.jpg');    
+                $('#result-image').attr('src', './image/woman/' + resultMessage + '.jpg');  
+                imageUrl = './image/woman/';  
             }
 
             $('.resultMessage').html(resultMessage);
@@ -384,7 +387,7 @@
                     $('#result_div' + (i+1)).show();
                     $('#etc_img' + (
                         i + 1
-                    )).attr('src', './image/woman/' + prediction[i].className + '.jpg');
+                    )).attr('src', imageUrl + prediction[i].className + '.jpg');
                 }
                 $('#result-etc-image-list').show();
             }
