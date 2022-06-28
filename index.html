@@ -528,9 +528,21 @@
                 $(this).addClass('selected');
             });
         });
+
+    $("meta[property='og\\:title']").attr("content", '타이틀넣기' );
+    $("meta[property='og\\:url']").attr("content", '주소넣기' );                    
+    $("meta[property='og\\:description']").attr("content", '페이지설명넣기' );
+    $("meta[property='og\\:image']").attr("content", '이미지주소넣기' );
+ 
+    // 동적으로 페이지 타이틀 수정하기
+    $(document).ready(function() {
+        document.title = '타이틀 변경하기';
+    });
     </script>
+    
 
 </body>
+<!-- https://wallpaperaccess.com/-->
 <!-- Copyright (c) 2022 by Aaron Vanston
 (https://codepen.io/aaronvanston/pen/yNYOXR) Permission is hereby granted, free
 of charge, to any person obtaining a copy of this software and associated
