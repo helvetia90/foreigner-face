@@ -120,9 +120,11 @@
             </div>
             <div class="file-upload-content">
                 <div id="resultdiv" class="wrapper" style="display:none;">
-                    <div class="col-md-3 resultbox">
-                        <img class="etc_img" id="result-image" src="#" alt="your image"/>
-                        <h3 class="resultMessage"></h3>
+                    <div class="col-md-3">
+                        <div class="resultbox">
+                            <img class="etc_img" id="result-image" src="#" alt="your image"/>
+                            <h3 class="resultMessage"></h3>
+                        </div>
                     </div>
                 </div>
                 <div id="loading">
@@ -222,7 +224,7 @@
                                 <h3 id="label1"></h3>
                             </div>
                             <span id="ppc-percents1" class="percent"></span>
-                            <div class="progress-pie-chart" id="piechart1"></div>
+                            <div id="piechart1"></div>
                         </div>
                         <div id="result_div2" class="col-md-3 etc_img_container">
                             <div class="resultbox">
@@ -230,8 +232,7 @@
                                 <h3 id="label2"></h3>
                             </div>
                             <span id="ppc-percents2" class="percent"></span>
-                            <div class="progress-pie-chart" id="piechart2">
-                            </div>
+                            <div id="piechart2"></div>
                         </div>
                         <div id="result_div3" class="col-md-3 etc_img_container">
                             <div class="resultbox">
@@ -239,8 +240,7 @@
                                 <h3 id="label3"></h3>
                             </div>
                             <span id="ppc-percents3" class="percent"></span>
-                            <div class="progress-pie-chart" id="piechart3">
-                            </div>
+                            <div id="piechart3"></div>
                         </div>
                         <div id="result_div4" class="col-md-3 etc_img_container">
                             <div class="resultbox">
@@ -248,8 +248,7 @@
                                 <h3 id="label4"></h3>
                             </div>
                             <span id="ppc-percents4" class="percent"></span>
-                            <div class="progress-pie-chart" id="piechart4">
-                            </div>
+                            <div id="piechart4"></div>
                         </div>
                     </div>
                 </div>
@@ -400,6 +399,7 @@
                     $('#label' + (
                         i + 1
                     )).text(prediction[i].className);
+                    $('#result_div' + (i+1)).addClass("wrapper");
                     $('#result_div' + (i+1)).show();
                     $('#etc_img' + (
                         i + 1

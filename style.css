@@ -5,7 +5,7 @@ body {
 
   .etc_img {
     width:100%;
-    max-width: 400px;
+    max-width: 300px;
     max-height:300px;
     margin-bottom:10px;
   }
@@ -711,7 +711,7 @@ i.material-icons {
 .resultbox {
     display: block;
     min-width: 300px;
-    height: 300px;
+    /* height: 300px; */
     margin: 10px;
     background-color: white;
     border-radius: 5px;
