@@ -119,7 +119,12 @@
                 </div>
             </div>
             <div class="file-upload-content">
-                <img class="result-image" id="result-image" src="#" alt="your image"/>
+                <div id="resultdiv" class="wrapper" style="display:none;">
+                    <div class="col-md-3 resultbox">
+                        <img class="etc_img" id="result-image" src="#" alt="your image"/>
+                        <h3 class="resultMessage"></h3>
+                    </div>
+                </div>
                 <div id="loading">
                     <div class="loader loader--style8" title="7">
                         <svg
@@ -207,7 +212,7 @@
                         </svg>
                     </div>
                 </div>
-                <h2 class="resultMessage"></h2>
+                <!-- <h2 class="resultMessage"></h2> -->
                 <div class="container" id="result-etc-image-list" style="display:none;">
                     <h2>그 외 나랑 닮은 외국 연예인은?</h2>
                     <div class="row" style="margin-top:20px;">
@@ -286,11 +291,12 @@
           }
             $("#startBtn").attr("disabled", true);
             $('.image-upload').attr('disabled', 'disabled');
-            $('.file-upload-content').show();
             $(this).html("분석중입니다..");
+            $('.file-upload-content').show();
             $('#loading').show();
             init().then(() => {
                 predict();
+                $('#resultdiv').show();
                 $('#loading').hide();
                 $('.share').show();
                 $('#startBtn').hide();
@@ -373,7 +379,7 @@
                 imageUrl = './image/woman/';  
             }
 
-            $('.resultMessage').html(resultMessage);
+            $('.resultMessage').text(resultMessage);
             var sum = 0;
             var cnt = 0;
             var probabilityList = [];
