@@ -325,8 +325,8 @@
         // More API functions here:
         // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
         // the link to your model provided by Teachable Machine export panel
-        const URL = "https://teachablemachine.withgoogle.com/models/A6Kanyhw7/";
-        const URL2 = "https://teachablemachine.withgoogle.com/models/CQygOwWJH/";
+        const manURL = "https://teachablemachine.withgoogle.com/models/A6Kanyhw7/";
+        const womanURL = "https://teachablemachine.withgoogle.com/models/CQygOwWJH/";
 
         let model,
             webcam,
@@ -339,11 +339,11 @@
             var metadataURL = "";
 
             if (toggle === "man") {
-                modelURL = URL + "model.json";
-                metadataURL = URL + "metadata.json";
+                modelURL = manURL + "model.json";
+                metadataURL = manURL + "metadata.json";
             } else {
-                modelURL = URL2 + "model.json";
-                metadataURL = URL2 + "metadata.json";
+                modelURL = womanURL + "model.json";
+                metadataURL = womanURL + "metadata.json";
             }
 
             // load the model and metadata Refer to tmImage.loadFromFiles() in the API to
@@ -351,11 +351,6 @@
             // Note: the pose library adds "tmImage" object to your window (window.tmImage)
             model = await tmImage.load(modelURL, metadataURL);
             maxPredictions = model.getTotalClasses();
-
-            // append elements to the DOM labelContainer =
-            // document.getElementById("label-container"); for (let i = 0; i <
-            // maxPredictions; i++) {  and class labels
-            // labelContainer.appendChild(document.createElement("div")); }
         }
 
         // run the webcam image through the image model
@@ -386,11 +381,7 @@
                 if (cnt >= 5) 
                     break;
                 
-                // console.log(prediction[i].probability);
                 if (prediction[i].probability.toFixed(2) > 0.00) {
-                    // const classPrediction =     prediction[i].className + ": " +
-                    // prediction[i].probability.toFixed(2); labelContainer.childNodes[i].innerHTML
-                    // = classPrediction;
                     sum += (prediction[i].probability.toFixed(2) * 1);
                     probabilityList[cnt] = prediction[i]
                         .probability
@@ -535,18 +526,6 @@
                 reader.readAsDataURL(input.files[0]);
             }
         }
-
-        $(document).ready(function () {
-            for (var i = 1; i <= 5; i++) {
-                $('#graphbarback' + i).hide();
-            }
-
-            $('.radio-group .radio').click(function () {
-                $('.selected .fa').removeClass('fa-check');
-                $('.radio').removeClass('selected');
-                $(this).addClass('selected');
-            });
-        });
     </script>
     
 <!-- https://wallpaperaccess.com/-->
@@ -597,5 +576,4 @@ PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
-
 </html>
