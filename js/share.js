@@ -1,7 +1,7 @@
 const url = 'https://resem-foreign.netlify.app';
 
-function kakaoShare(src){
-    src = src.substr(1);
+function kakaoShare(img){
+    var src = img.substring(1);
     console.log(src);
     Kakao.Share.sendDefault({
     objectType: 'feed',
