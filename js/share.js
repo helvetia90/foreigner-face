@@ -1,65 +1,59 @@
 function kakaoShare(){
-    Kakao.Share.sendDefault({
-        objectType: 'feed',
-        content: {
-        title: '오늘의 디저트',
-        description: '아메리카노, 빵, 케익',
-        imageUrl:
-            'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
-        link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            androidExecutionParams: 'test',
+    Kakao.Share.createDefaultButton({
+        container: '#kakaotalk-sharing-btn',
+        objectType: 'list',
+        headerTitle: 'WEEKLY MAGAZINE',
+        headerLink: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
         },
-        },
-        itemContent: {
-        profileText: 'Kakao',
-        profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageText: 'Cheese cake',
-        titleImageCategory: 'Cake',
-        items: [
-            {
-            item: 'Cake1',
-            itemOp: '1000원',
+        contents: [
+          {
+            title: '취미의 특징, 탁구',
+            description: '스포츠',
+            imageUrl:
+              'http://k.kakaocdn.net/dn/bDPMIb/btqgeoTRQvd/49BuF1gNo6UXkdbKecx600/kakaolink40_original.png',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
             },
-            {
-            item: 'Cake2',
-            itemOp: '2000원',
+          },
+          {
+            title: '크림으로 이해하는 커피이야기',
+            description: '음식',
+            imageUrl:
+              'http://k.kakaocdn.net/dn/QPeNt/btqgeSfSsCR/0QJIRuWTtkg4cYc57n8H80/kakaolink40_original.png',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
             },
-            {
-            item: 'Cake3',
-            itemOp: '3000원',
+          },
+          {
+            title: '감성이 가득한 분위기',
+            description: '사진',
+            imageUrl:
+              'http://k.kakaocdn.net/dn/c7MBX4/btqgeRgWhBy/ZMLnndJFAqyUAnqu4sQHS0/kakaolink40_original.png',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
             },
-            {
-            item: 'Cake4',
-            itemOp: '4000원',
-            },
-            {
-            item: 'Cake5',
-            itemOp: '5000원',
-            },
+          },
         ],
-        sum: '총 결제금액',
-        sumOp: '15000원',
-        },
-        social: {
-        likeCount: 10,
-        commentCount: 20,
-        sharedCount: 30,
-        },
         buttons: [
-        {
-            title: '웹으로 이동',
+          {
+            title: '웹으로 보기',
             link: {
-            mobileWebUrl: 'https://developers.kakao.com',
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
             },
-        },
-        {
-            title: '앱으로 이동',
+          },
+          {
+            title: '앱으로 보기',
             link: {
-            mobileWebUrl: 'https://developers.kakao.com',
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
             },
-        },
-        ]
-    })
+          },
+        ],
+      });
 }
