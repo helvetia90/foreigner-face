@@ -1,4 +1,5 @@
-function kakaoShare(){Kakao.Share.sendDefault({
+function kakaoShare(){
+    Kakao.Share.sendDefault({
     objectType: 'feed',
     content: {
       title: '오늘의 디저트',
