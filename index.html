@@ -20,6 +20,15 @@
         <script
             type="text/javascript"
             src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-622b59d0ce8e96ef"></script>
+        <script src="https://developers.kakao.com/sdk/js/kakao.js"></script> 
+        <script>
+            // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+            Kakao.init('99446392589296ec53112591ebefe0e8');
+    
+            // SDK 초기화 여부를 판단합니다.
+            console.log(Kakao.isInitialized());
+        </script>
+        <script src="./js/share.js" charset="utf-8"></script>
     </head>
     <body>
         <section class="section">
@@ -262,6 +271,7 @@
                 </div>
                 <p class="share">결과를 친구에게 공유해보세요!</p>
                 <div class="addthis_inline_share_toolbox_iabr share"></div>
+                <button onclick="js:kakaoShare">공유하기</button>
             </div>
             <!-- Go to www.addthis.com/dashboard to customize your tools -->
 
