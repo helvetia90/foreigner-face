@@ -1,5 +1,5 @@
-    Kakao.Share.createDefaultButton({
-        container: '#kakaotalk-sharing-btn',
+function kakaoShare(){
+    Kakao.Share.sendDefault({
         objectType: 'list',
         headerTitle: 'WEEKLY MAGAZINE',
         headerLink: {
@@ -55,3 +55,4 @@
           },
         ],
       });
+}
