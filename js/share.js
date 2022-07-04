@@ -1,3 +1,5 @@
+const url = 'https://resem-foreign.netlify.app/';
+
 function kakaoShare(){
     Kakao.Share.sendDefault({
     objectType: 'feed',
@@ -5,9 +7,9 @@ function kakaoShare(){
       title: 'Sam Claflin',
       description: '99%',
       imageUrl:
-        './image/man/Taron Egerton.jpg',
+        url + 'image/man/Taron Egerton.jpg',
       link: {
-        mobileWebUrl: 'https://developers.kakao.com',
+        mobileWebUrl: 'https://resem-foreign.netlify.app/',
         androidExecutionParams: 'test',
       },
     },
@@ -15,7 +17,7 @@ function kakaoShare(){
       {
         title: '나랑 닮은 외국 연예인은?',
         link: {
-          mobileWebUrl: 'https://developers.kakao.com',
+          mobileWebUrl: 'https://resem-foreign.netlify.app/',
         },
       },
     ]
