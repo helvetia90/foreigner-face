@@ -1,13 +1,14 @@
-const url = 'https://resem-foreign.netlify.app/';
+const url = 'https://resem-foreign.netlify.app';
 
-function kakaoShare(){
+function kakaoShare(src){
+    src.substr(1);
     Kakao.Share.sendDefault({
     objectType: 'feed',
     content: {
       title: 'Sam Claflin',
       description: '99%',
       imageUrl:
-        url + 'image/man/Taron Egerton.jpg',
+        url + src,
       link: {
         mobileWebUrl: 'https://resem-foreign.netlify.app/',
         androidExecutionParams: 'test',
