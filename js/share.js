@@ -1,4 +1,3 @@
-function kakaoShare(){
     Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'list',
@@ -56,4 +55,3 @@ function kakaoShare(){
           },
         ],
       });
-}
