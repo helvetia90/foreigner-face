@@ -7,7 +7,7 @@ function kakaoShare(img,name,score){
     objectType: 'feed',
     content: {
       title: name,
-      description: score + '%',
+      description: score,
       imageUrl:
         url + src,
       link: {
