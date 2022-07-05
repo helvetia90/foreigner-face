@@ -1,9 +1,10 @@
 const url = 'https://resem-foreign.netlify.app';
 
-function kakaoShare(img, etc){
-    var etc = etc.split(',');
-    var name = etc[0];
-    var score = etc[1];
+function kakaoShare(etc){
+    var etc = etc.split('|');
+    var src = etc[0];
+    var name = etc[1];
+    var score = etc[2];
     var src = img.substring(1);
     console.log(src + etc);
     Kakao.Share.sendDefault({
