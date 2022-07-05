@@ -304,13 +304,9 @@
            return src;
         }
 
-        function getName(){
-            var name = $('#resultMessage').text();
-            return name;
-        }
-
-        function getScore(){
-            var score = $('#ppc-percents1').text();
+        function getEtc(){
+            var etc = $('#resultMessage').text() + '/' + $('#ppc-percents1').text();
+            return etc;
         }
 
         var toggle = "man";
